@@ -14,6 +14,8 @@ cd protege-pprj && ant
 ```
 ## How it works
 
+[Documentation for xsl](https://ubbdst.github.io/protege-pprj/changePprj.html)
+
 Main function pfl:createItemsFromPprj creates an xml representation of the document to update the pprj.
 The model is a wrapper xml with data which could be used to be matched on:
 
