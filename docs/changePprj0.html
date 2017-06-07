@@ -1,0 +1,1567 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Stylesheet documentation for: changePprj.xsl</title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
+         <!--
+        
+        var parametersBoxes= new Array('prs_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidgetM_classHierarchyWidgetS_changePprj.xsl', 
+				'prs_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.UUIDWidgetM_IdentifiersAndUUIDS_changePprj.xsl');
+
+        
+        var usedByBoxes= new Array('uB_P_pprj-fileS_changePprj.xsl', 
+				'uB_P_debugS_changePprj.xsl', 
+				'uB_P_project-nameS_changePprj.xsl');
+
+        var docBoxes= new Array('dS_changePprj.xsl', 
+				'dS_M_S_changePprj.xsl', 
+				'dS_M_M_update-UUIDWidgetclassHierarchyWidgetIdentifiersAndUUIDS_changePprj.xsl', 
+				'dS_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidgetM_classHierarchyWidgetS_changePprj.xsl', 
+				'dS_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.UUIDWidgetM_IdentifiersAndUUIDS_changePprj.xsl', 
+				'dS_M_pfldataitemnamehttppurl.orgdctermsidentifierandnotpflitemPropertyHasWidgetselfnodehttppurl.orgdctermsidentifieredu.stanford.smi.protegex.owl.ui.widget.UBBSignatureWidgetM_IdentifiersAndUUIDS_changePprj.xsl', 
+				'dS_M_itemM_to-textS_changePprj.xsl', 
+				'dS_P_pprj-fileS_changePprj.xsl', 
+				'dS_P_lookupS_changePprj.xsl', 
+				'dS_O_S_changePprj.xsl');
+
+        var sourceBoxes= new Array('src_M_S_changePprj.xsl', 
+				'src_M_M_update-UUIDWidgetclassHierarchyWidgetIdentifiersAndUUIDS_changePprj.xsl', 
+				'src_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidgetM_classHierarchyWidgetS_changePprj.xsl', 
+				'src_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.UUIDWidgetM_IdentifiersAndUUIDS_changePprj.xsl', 
+				'src_M_pfldataitemnamehttppurl.orgdctermsidentifierandnotpflitemPropertyHasWidgetselfnodehttppurl.orgdctermsidentifieredu.stanford.smi.protegex.owl.ui.widget.UBBSignatureWidgetM_IdentifiersAndUUIDS_changePprj.xsl', 
+				'src_M_itemM_to-textS_changePprj.xsl', 
+				'src_P_pprj-fileS_changePprj.xsl', 
+				'src_P_debugS_changePprj.xsl', 
+				'src_P_lookupS_changePprj.xsl', 
+				'src_P_project-nameS_changePprj.xsl', 
+				'src_O_S_changePprj.xsl');
+
+        
+        
+        var referencesBoxes= new Array('refs_M_S_changePprj.xsl', 
+				'refs_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidgetM_classHierarchyWidgetS_changePprj.xsl', 
+				'refs_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.UUIDWidgetM_IdentifiersAndUUIDS_changePprj.xsl', 
+				'refs_M_pfldataitemnamehttppurl.orgdctermsidentifierandnotpflitemPropertyHasWidgetselfnodehttppurl.orgdctermsidentifieredu.stanford.smi.protegex.owl.ui.widget.UBBSignatureWidgetM_IdentifiersAndUUIDS_changePprj.xsl');
+
+        
+        var includesBoxes= new Array('ic_changePprj.xsl');
+
+        
+        
+        var button_prefix = 'bt_';
+        
+        /**
+        * Get all DIV elements with a specified class name.
+        *
+        * @param className The class name. 
+        */
+        function getElementsByClassName(className) {
+            var results = [];
+    
+             if (document.getElementsByClassName == undefined) {
+                var allElements = document.getElementsByTagName("div");
+                var element;
+                for (var i = 0; i < allElements.length; i++) {
+                    var element = allElements[i];
+                	var elementClass = element.className;
+                	if (elementClass == className) { 
+                		results.push(element);
+                	}
+                }
+             } else {
+                results = document.getElementsByClassName(className);
+             }
+    
+            return results;
+        }
+            
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+
+       /**
+        * Switch between the compact list representation and the clasic list representation.
+        */
+       function switchMode(checkBox) {
+            if (checkBox == null) {
+                // Checkbox not found
+            } else if (checkBox.checked == 1) {
+                // Compact mode
+                var divs = getElementsByClassName('refItemBlock');
+                for (var i = 0; i < divs.length; i ++) {
+                    divs[i].style.display = "inline";
+                    var children = divs[i].children;
+                    var refItemSep = children[children.length - 1];
+                    if (refItemSep.className == "refItemSep") {
+                        children[children.length - 1].style.display = "inline";
+                    }
+                }
+            } else {
+                // Expanded mode
+                var divs = getElementsByClassName('refItemBlock');
+                for (var i = 0; i < divs.length; i ++) {
+                    divs[i].style.display = "block";
+                    var children = divs[i].children;
+                    var refItemSep = children[children.length - 1];
+                    if (refItemSep.className == "refItemSep") {
+                        children[children.length - 1].style.display = "none";
+                    }
+                }
+            }
+        }
+
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updPT(message) {
+            top.document.title = "Stylesheet documentation for: " + message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id){
+         var selectIds = new Array('toc_group_by_location', 'toc_group_by_component_type', 'toc_group_by_namespace', 'toc_group_by_mode');
+            // Make all the tabs invisible.
+            for (i = 0; i < 4; i++){
+               var tab = getElementObject(selectIds[i]);
+               tab.style.display = 'none';
+            }
+            var selTab = getElementObject(id);
+            selTab.style.display = 'block';            
+         }
+          
+
+    
+                    //--></script></head>
+   <body>
+      <div id="global_controls" class="globalControls" style="position:absolute;right:0;">
+         <table class="rt">
+            <tr>
+               <td class="rt_cTL"></td>
+               <td class="rt_lT"></td>
+               <td class="rt_cTR"></td>
+            </tr>
+            <tr>
+               <td class="rt_lL"></td>
+               <td class="rt_cnt">
+                  <h3>Mode:</h3>
+                  <table>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchMode(this);" class="control" /></span><span class="globalControlName">Compact lists</span></td>
+                     </tr>
+                  </table>
+                  <h3>Showing:</h3>
+                  <table>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, docBoxes);" class="control" /></span><span class="globalControlName">Documentation
+                              </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, parametersBoxes);" class="control" /></span><span class="globalControlName">Parameters </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, usedByBoxes);" class="control" /></span><span class="globalControlName">Used by </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, referencesBoxes);" class="control" /></span><span class="globalControlName">References </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, includesBoxes);" class="control" /></span><span class="globalControlName">Included modules
+                              </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, sourceBoxes);" class="control" /></span><span class="globalControlName">Source </span></td>
+                     </tr>
+                  </table>
+                  <div align="right"><span><input type="button" onclick="getElementObject('global_controls').style.display = 'none';" value="Close" /></span></div>
+               </td>
+               <td class="rt_lR"></td>
+            </tr>
+            <tr>
+               <td class="rt_cBL"></td>
+               <td class="rt_lB"></td>
+               <td class="rt_cBR"></td>
+            </tr>
+         </table>
+      </div><a id="changePprj.xsl"></a><div class="cmpT">Main stylesheet
+         <span class="qname">changePprj.xsl</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_changePprj.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p><b>Created on:</b> Jun 2, 2017
+                                 </p>
+                                 
+                                 <p>Example stylesheet which parses a pprj project and does changes to its example files.</p>
+                                 
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Included modules</div>
+                           <div class="flR"><input id="bt_ic_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('ic_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="ic_changePprj.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="changePprj1.html#libprotege3-pprj-functions.xsl" target="_self" title="No namespace" onclick="updPT('lib/protege3-pprj-functions.xsl')">lib/protege3-pprj-functions.xsl</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Stylesheet version</td>
+                        <td>3.0</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="M_S_changePprj.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">/</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_S_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_S_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_S_changePprj.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>Starting point, generates a result file in variable $structured-result.</p>
+                                 
+                                 <p>Prints model if output is changed to xml, and if debug param is set.</p>
+                                 
+                                 <p>A root element <pre>pfldata:items</pre> with mixed-contents to be used for intermediate results before changes.</p>
+                                 
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>/</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_M_S_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_M_S_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_M_S_changePprj.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Parameters</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="changePprj0.html#P_debugS_changePprj.xsl" target="_self" title="No namespace" onclick="updPT('changePprj.xsl')">debug</a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="changePprj0.html#P_pprj-fileS_changePprj.xsl" target="_self" title="No namespace" onclick="updPT('changePprj.xsl')">pprj-file</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="fCol">Functions</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="changePprj1.html#F_createItemsFromPprjS_libprotege3-pprj-functions.xsl" target="_self" title="http://data.ub.uib.no/protege3/function-library" onclick="updPT('lib/protege3-pprj-functions.xsl')"><span>createItemsFromPprj (</span><span class="fParams">pprj-string</span><span>)</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="changePprj1.html#F_getNextItemNumberS_libprotege3-pprj-functions.xsl" target="_self" title="http://data.ub.uib.no/protege3/function-library" onclick="updPT('lib/protege3-pprj-functions.xsl')"><span>getNextItemNumber (</span><span class="fParams">input-string</span><span>)</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_S_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_S_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_S_changePprj.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"/"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"pprj"</span><span class="tAN"> select=</span><span class="tAV">"unparsed-text($pprj-file)"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tC">&lt;!-- generate a xml representation of the pprj file, consisting of 
+         items/item[all machine readable values to be used as attributes]/text()[full text of item as is]--&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"structured-result"</span><span class="tAN"> select=</span><span class="tAV">"pfl:createItemsFromPprj($pprj)"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:if</span><span class="tAN"> test=</span><span class="tAV">"$debug"</span><span class="tXSLEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:copy-of</span><span class="tAN"> select=</span><span class="tAV">"$structured-result"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;/xsl:if&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"change-identifiers-and-add-UUID-property-and-widget"</span><span class="tXSLEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"$structured-result"</span><span class="tAN"> mode=</span><span class="tAV">"IdentifiersAndUUID"</span><span class="tXSLEl">&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:with-param</span><span class="tAN"> name=</span><span class="tAV">"starting-number"</span><span class="tAN"> select=</span><span class="tAV">"pfl:getNextItemNumber($pprj)"</span><span class="tAN"> tunnel=</span><span class="tAV">"yes"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;/xsl:apply-templates&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;/xsl:variable&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"add-class-hierarchy-widget"</span><span class="tXSLEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"$change-identifiers-and-add-UUID-property-and-widget"</span><span class="tAN"> mode=</span><span class="tAV">"classHierarchyWidget"</span><span class="tXSLEl">&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:with-param</span><span class="tAN"> name=</span><span class="tAV">"starting-number"</span><span class="tAN"> select=</span><span class="tAV">"pfl:getNextItemNumber(string($change-identifiers-and-add-UUID-property-and-widget))"</span><span class="tAN"> tunnel=</span><span class="tAV">"yes"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;/xsl:apply-templates&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;/xsl:variable&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"$add-class-hierarchy-widget"</span><span class="tAN"> mode=</span><span class="tAV">"to-text"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="M_M_update-UUIDWidgetclassHierarchyWidgetIdentifiersAndUUIDS_changePprj.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">*</span><span class="titleTemplateMode">update-UUIDWidget classHierarchyWidget IdentifiersAndUUID</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_M_update-UUIDWidgetclassHierarchyWidgetIdentifiersAndUUIDS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_M_update-UUIDWidgetclassHierarchyWidgetIdentifiersAndUUIDS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_M_update-UUIDWidgetclassHierarchyWidgetIdentifiersAndUUIDS_changePprj.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>Template match of a propertylist which is for an ontology Class (i.e traverse to find
+                                    out if something should be added).
+                                 </p>
+                                 
+                                 <table>
+                                    <tr>
+                                       <h4>Parameters</h4>
+                                       <td class="paramName"><b>widget-for-all</b></td>
+                                       <td>param name</td>
+                                    </tr>
+                                 </table>
+                              </div>
+                              <hr />
+                              <div>
+                                 <h3>Description</h3><pre> each update has its own mode, have a result variable as element(items), and apply next change to it. 
+        Solves issue with counting for creating new values.
+        </pre><pre> basic copy of select match to keep values between iterations, add mode for new changes</pre></div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>*</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>update-UUIDWidget classHierarchyWidget IdentifiersAndUUID</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_M_update-UUIDWidgetclassHierarchyWidgetIdentifiersAndUUIDS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_M_update-UUIDWidgetclassHierarchyWidgetIdentifiersAndUUIDS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_M_update-UUIDWidgetclassHierarchyWidgetIdentifiersAndUUIDS_changePprj.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"*"</span><span class="tAN"> mode=</span><span class="tAV">"update-UUIDWidget classHierarchyWidget IdentifiersAndUUID"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:copy</span><span class="tXSLEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:copy-of</span><span class="tAN"> select=</span><span class="tAV">"@*"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> mode=</span><span class="tAV">"#current"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;/xsl:copy&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidgetM_classHierarchyWidgetS_changePprj.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">pfldata:item[@properties          and          pfl:isPropertylistForOntology(self::pfldata:item,$ubbont-document)
+            and not(pfl:itemHasPropertyWithWidget(self::node(),'edu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidget'))
+            ]</span><span class="titleTemplateMode">classHierarchyWidget</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidgetM_classHierarchyWidgetS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidgetM_classHierarchyWidgetS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidgetM_classHierarchyWidgetS_changePprj.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>Adding ClassHierarchyURIWidget</p>
+                                 
+                                 <table>
+                                    <tr>
+                                       <h4>Parameters</h4>
+                                       <td class="paramName"><b>starting-number</b></td>
+                                       <td></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>pfldata:item[@properties          and          pfl:isPropertylistForOntology(self::pfldata:item,$ubbont-document)
+                           and not(pfl:itemHasPropertyWithWidget(self::node(),'edu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidget'))
+                           ]
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>classHierarchyWidget</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidgetM_classHierarchyWidgetS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidgetM_classHierarchyWidgetS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidgetM_classHierarchyWidgetS_changePprj.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variable</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="changePprj1.html#V_ubbont-documentS_libprotege3-pprj-functions.xsl" target="_self" title="No namespace" onclick="updPT('lib/protege3-pprj-functions.xsl')">ubbont-document</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="fCol">Functions</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="changePprj1.html#F_addItemS_libprotege3-pprj-functions.xsl" target="_self" title="http://data.ub.uib.no/protege3/function-library" onclick="updPT('lib/protege3-pprj-functions.xsl')"><span>addItem (</span><span class="fParams">project-type, id</span><span>)</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="changePprj1.html#F_addPointerToPropertyListS_libprotege3-pprj-functions.xsl" target="_self" title="http://data.ub.uib.no/protege3/function-library" onclick="updPT('lib/protege3-pprj-functions.xsl')"><span>addPointerToPropertyList (</span><span class="fParams">item, pointer</span><span>)</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="changePprj1.html#F_addPropertyToItemS_libprotege3-pprj-functions.xsl" target="_self" title="http://data.ub.uib.no/protege3/function-library" onclick="updPT('lib/protege3-pprj-functions.xsl')"><span>addPropertyToItem (</span><span class="fParams">item, property, value</span><span>)</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="changePprj1.html#F_isPropertylistForOntologyS_libprotege3-pprj-functions.xsl" target="_self" title="http://data.ub.uib.no/protege3/function-library" onclick="updPT('lib/protege3-pprj-functions.xsl')"><span>isPropertylistForOntology (</span><span class="fParams">item, ontology</span><span>)</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="changePprj1.html#F_itemHasPropertyWithWidgetS_libprotege3-pprj-functions.xsl" target="_self" title="http://data.ub.uib.no/protege3/function-library" onclick="updPT('lib/protege3-pprj-functions.xsl')"><span>itemHasPropertyWithWidget (</span><span class="fParams">item, widget</span><span>)</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="changePprj1.html#F_itemObjectNameFromValueS_libprotege3-pprj-functions.xsl" target="_self" title="http://data.ub.uib.no/protege3/function-library" onclick="updPT('lib/protege3-pprj-functions.xsl')"><span>itemObjectNameFromValue (</span><span class="fParams">value</span><span>)</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="fCol">Parameter</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="changePprj0.html#P_project-nameS_changePprj.xsl" target="_self" title="No namespace" onclick="updPT('changePprj.xsl')">project-name</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Parameters</div>
+                           <div class="flR"><input id="bt_prs_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidgetM_classHierarchyWidgetS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('prs_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidgetM_classHierarchyWidgetS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="prs_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidgetM_classHierarchyWidgetS_changePprj.xsl" style="display:block">
+                              <table class="attsT">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th>Namespace</th>
+                                       <th>Type</th>
+                                       <th>Tunnel</th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="fCol">starting-number</td>
+                                    <td>No namespace</td>
+                                    <td>xs:integer</td>
+                                    <td>yes</td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidgetM_classHierarchyWidgetS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidgetM_classHierarchyWidgetS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidgetM_classHierarchyWidgetS_changePprj.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"pfldata:item[@properties          and          pfl:isPropertylistForOntology(self::pfldata:item,$ubbont-document)        and not(pfl:itemHasPropertyWithWidget(self::node(),'edu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidget')) ]"</span><span class="tAN"> mode=</span><span class="tAV">"classHierarchyWidget"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:param</span><span class="tAN"> name=</span><span class="tAV">"starting-number"</span><span class="tAN"> tunnel=</span><span class="tAV">"yes"</span><span class="tAN"> as=</span><span class="tAV">"xs:integer"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"position"</span><span class="tAN"> as=</span><span class="tAV">"xs:integer"</span><span class="tXSLEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:number</span><span class="tAN"> count=</span><span class="tAV">"pfldata:item[@properties                  and pfl:isPropertylistForOntology(self::pfldata:item,$ubbont-document)                 and not(pfl:itemHasPropertyWithWidget(self::node(),'edu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidget')) ]"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;/xsl:variable&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"next-number"</span><span class="tAN"> select=</span><span class="tAV">"$starting-number+$position"</span><span class="tAN"> as=</span><span class="tAV">"xs:integer"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"next-item"</span><span class="tAN"> select=</span><span class="tAV">"pfl:itemObjectNameFromValue(concat($project-name,$next-number))"</span><span class="tAN"> as=</span><span class="tAV">"xs:string"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"updated-item"</span><span class="tAN"> as=</span><span class="tAV">"element(pfldata:item)"</span><span class="tXSLEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:sequence</span><span class="tAN"> select=</span><span class="tAV">"pfl:addPointerToPropertyList(self::node(),$next-item)"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;/xsl:variable&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"new-item"</span><span class="tAN"> select=</span><span class="tAV">"pfl:addItem('Widget',$next-item)"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"do-changes"</span><span class="tAN"> select=</span><span class="tAV">"             pfl:addPropertyToItem(             pfl:addPropertyToItem(             pfl:addPropertyToItem(             pfl:addPropertyToItem(             pfl:addPropertyToItem($new-item             ,'name','http://data.ub.uib.no/ontology/classHierarchyURI')             ,'widget_class_name','edu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidget')             ,'width','0')             ,'height','0')             ,'is_hidden','TRUE') "</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:copy-of</span><span class="tAN"> select=</span><span class="tAV">"$updated-item"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:copy-of</span><span class="tAN"> select=</span><span class="tAV">"$do-changes"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.UUIDWidgetM_IdentifiersAndUUIDS_changePprj.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">pfldata:item[@properties          and pfl:isPropertylistForOntology(self::pfldata:item,$ubbont-document)
+            and not(pfl:itemHasPropertyWithWidget(self::node(),'edu.stanford.smi.protegex.owl.ui.widget.UUIDWidget'))]</span><span class="titleTemplateMode">IdentifiersAndUUID</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.UUIDWidgetM_IdentifiersAndUUIDS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.UUIDWidgetM_IdentifiersAndUUIDS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.UUIDWidgetM_IdentifiersAndUUIDS_changePprj.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>Adding UUID widget to pprj.</p>
+                                 
+                                 <table>
+                                    <tr>
+                                       <h4>Parameters</h4>
+                                       <td class="paramName"><b>starting-number</b></td>
+                                       <td></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>pfldata:item[@properties          and pfl:isPropertylistForOntology(self::pfldata:item,$ubbont-document)
+                           and not(pfl:itemHasPropertyWithWidget(self::node(),'edu.stanford.smi.protegex.owl.ui.widget.UUIDWidget'))]
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>IdentifiersAndUUID</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.UUIDWidgetM_IdentifiersAndUUIDS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.UUIDWidgetM_IdentifiersAndUUIDS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.UUIDWidgetM_IdentifiersAndUUIDS_changePprj.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variable</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="changePprj1.html#V_ubbont-documentS_libprotege3-pprj-functions.xsl" target="_self" title="No namespace" onclick="updPT('lib/protege3-pprj-functions.xsl')">ubbont-document</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="fCol">Functions</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="changePprj1.html#F_addItemS_libprotege3-pprj-functions.xsl" target="_self" title="http://data.ub.uib.no/protege3/function-library" onclick="updPT('lib/protege3-pprj-functions.xsl')"><span>addItem (</span><span class="fParams">project-type, id</span><span>)</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="changePprj1.html#F_addPointerToPropertyListS_libprotege3-pprj-functions.xsl" target="_self" title="http://data.ub.uib.no/protege3/function-library" onclick="updPT('lib/protege3-pprj-functions.xsl')"><span>addPointerToPropertyList (</span><span class="fParams">item, pointer</span><span>)</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="changePprj1.html#F_addPropertyToItemS_libprotege3-pprj-functions.xsl" target="_self" title="http://data.ub.uib.no/protege3/function-library" onclick="updPT('lib/protege3-pprj-functions.xsl')"><span>addPropertyToItem (</span><span class="fParams">item, property, value</span><span>)</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="changePprj1.html#F_isPropertylistForOntologyS_libprotege3-pprj-functions.xsl" target="_self" title="http://data.ub.uib.no/protege3/function-library" onclick="updPT('lib/protege3-pprj-functions.xsl')"><span>isPropertylistForOntology (</span><span class="fParams">item, ontology</span><span>)</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="changePprj1.html#F_itemHasPropertyWithWidgetS_libprotege3-pprj-functions.xsl" target="_self" title="http://data.ub.uib.no/protege3/function-library" onclick="updPT('lib/protege3-pprj-functions.xsl')"><span>itemHasPropertyWithWidget (</span><span class="fParams">item, widget</span><span>)</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="changePprj1.html#F_itemObjectNameFromValueS_libprotege3-pprj-functions.xsl" target="_self" title="http://data.ub.uib.no/protege3/function-library" onclick="updPT('lib/protege3-pprj-functions.xsl')"><span>itemObjectNameFromValue (</span><span class="fParams">value</span><span>)</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="fCol">Parameter</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="changePprj0.html#P_project-nameS_changePprj.xsl" target="_self" title="No namespace" onclick="updPT('changePprj.xsl')">project-name</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Parameters</div>
+                           <div class="flR"><input id="bt_prs_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.UUIDWidgetM_IdentifiersAndUUIDS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('prs_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.UUIDWidgetM_IdentifiersAndUUIDS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="prs_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.UUIDWidgetM_IdentifiersAndUUIDS_changePprj.xsl" style="display:block">
+                              <table class="attsT">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th>Namespace</th>
+                                       <th>Tunnel</th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="fCol">starting-number</td>
+                                    <td>No namespace</td>
+                                    <td>yes</td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.UUIDWidgetM_IdentifiersAndUUIDS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.UUIDWidgetM_IdentifiersAndUUIDS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.UUIDWidgetM_IdentifiersAndUUIDS_changePprj.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"pfldata:item[@properties          and pfl:isPropertylistForOntology(self::pfldata:item,$ubbont-document)          and not(pfl:itemHasPropertyWithWidget(self::node(),'edu.stanford.smi.protegex.owl.ui.widget.UUIDWidget'))]"</span><span class="tAN"> mode=</span><span class="tAV">"IdentifiersAndUUID"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:param</span><span class="tAN"> name=</span><span class="tAV">"starting-number"</span><span class="tAN"> tunnel=</span><span class="tAV">"yes"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"position"</span><span class="tAN"> as=</span><span class="tAV">"xs:integer"</span><span class="tXSLEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:number</span><span class="tAN"> count=</span><span class="tAV">"pfldata:item[@properties                  and pfl:isPropertylistForOntology(self::pfldata:item,$ubbont-document)                  and not(pfl:itemHasPropertyWithWidget(self::node(),'edu.stanford.smi.protegex.owl.ui.widget.UUIDWidget')) ]"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;/xsl:variable&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"next-number"</span><span class="tAN"> select=</span><span class="tAV">"$starting-number+$position"</span><span class="tAN"> as=</span><span class="tAV">"xs:integer"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"next-item"</span><span class="tAN"> select=</span><span class="tAV">"pfl:itemObjectNameFromValue(concat($project-name,$next-number))"</span><span class="tAN"> as=</span><span class="tAV">"xs:string"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"updated-item"</span><span class="tAN"> as=</span><span class="tAV">"element(pfldata:item)"</span><span class="tAN"> select=</span><span class="tAV">"pfl:addPointerToPropertyList(self::node(),$next-item)"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"new-item"</span><span class="tAN"> select=</span><span class="tAV">"pfl:addItem('Widget',$next-item)"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"do-changes"</span><span class="tAN"> select=</span><span class="tAV">"             pfl:addPropertyToItem(             pfl:addPropertyToItem(             pfl:addPropertyToItem(             pfl:addPropertyToItem(             pfl:addPropertyToItem($new-item             ,'name','http://data.ub.uib.no/ontology/uuid')             ,'widget_class_name','edu.stanford.smi.protegex.owl.ui.widget.UUIDWidget')             ,'width','0')             ,'height','0')             ,'is_hidden','TRUE') "</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:copy-of</span><span class="tAN"> select=</span><span class="tAV">"$updated-item"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:copy-of</span><span class="tAN"> select=</span><span class="tAV">"$do-changes"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="M_pfldataitemnamehttppurl.orgdctermsidentifierandnotpflitemPropertyHasWidgetselfnodehttppurl.orgdctermsidentifieredu.stanford.smi.protegex.owl.ui.widget.UBBSignatureWidgetM_IdentifiersAndUUIDS_changePprj.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">pfldata:item[@name='http://purl.org/dc/terms/identifier' and not(pfl:itemPropertyHasWidget(self::node(),'http://purl.org/dc/terms/identifier','edu.stanford.smi.protegex.owl.ui.widget.UBBSignatureWidget'))]</span><span class="titleTemplateMode">IdentifiersAndUUID</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_pfldataitemnamehttppurl.orgdctermsidentifierandnotpflitemPropertyHasWidgetselfnodehttppurl.orgdctermsidentifieredu.stanford.smi.protegex.owl.ui.widget.UBBSignatureWidgetM_IdentifiersAndUUIDS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_pfldataitemnamehttppurl.orgdctermsidentifierandnotpflitemPropertyHasWidgetselfnodehttppurl.orgdctermsidentifieredu.stanford.smi.protegex.owl.ui.widget.UBBSignatureWidgetM_IdentifiersAndUUIDS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_pfldataitemnamehttppurl.orgdctermsidentifierandnotpflitemPropertyHasWidgetselfnodehttppurl.orgdctermsidentifieredu.stanford.smi.protegex.owl.ui.widget.UBBSignatureWidgetM_IdentifiersAndUUIDS_changePprj.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>Update identifier widget if it is not the wanted widget. Apply result once more, to
+                                    write text version or other match. 
+                                 </p>
+                                 
+                                 <p>note: make sure that the third argument of itemNeeds is the same as widget to be added
+                                    to avoid eternal loop.
+                                 </p>
+                                 
+                                 <table>
+                                    <tr>
+                                       <h4>Parameters</h4>
+                                       <td class="paramName"><b>items</b></td>
+                                       <td></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>pfldata:item[@name='http://purl.org/dc/terms/identifier' and not(pfl:itemPropertyHasWidget(self::node(),'http://purl.org/dc/terms/identifier','edu.stanford.smi.protegex.owl.ui.widget.UBBSignatureWidget'))]</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>IdentifiersAndUUID</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_M_pfldataitemnamehttppurl.orgdctermsidentifierandnotpflitemPropertyHasWidgetselfnodehttppurl.orgdctermsidentifieredu.stanford.smi.protegex.owl.ui.widget.UBBSignatureWidgetM_IdentifiersAndUUIDS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_M_pfldataitemnamehttppurl.orgdctermsidentifierandnotpflitemPropertyHasWidgetselfnodehttppurl.orgdctermsidentifieredu.stanford.smi.protegex.owl.ui.widget.UBBSignatureWidgetM_IdentifiersAndUUIDS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_M_pfldataitemnamehttppurl.orgdctermsidentifierandnotpflitemPropertyHasWidgetselfnodehttppurl.orgdctermsidentifieredu.stanford.smi.protegex.owl.ui.widget.UBBSignatureWidgetM_IdentifiersAndUUIDS_changePprj.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Functions</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="changePprj1.html#F_addPropertyToItemS_libprotege3-pprj-functions.xsl" target="_self" title="http://data.ub.uib.no/protege3/function-library" onclick="updPT('lib/protege3-pprj-functions.xsl')"><span>addPropertyToItem (</span><span class="fParams">item, property, value</span><span>)</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="changePprj1.html#F_itemPropertyHasWidgetS_libprotege3-pprj-functions.xsl" target="_self" title="http://data.ub.uib.no/protege3/function-library" onclick="updPT('lib/protege3-pprj-functions.xsl')"><span>itemPropertyHasWidget (</span><span class="fParams">item, property, widget</span><span>)</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="changePprj1.html#F_removePropertyFromItemS_libprotege3-pprj-functions.xsl" target="_self" title="http://data.ub.uib.no/protege3/function-library" onclick="updPT('lib/protege3-pprj-functions.xsl')"><span>removePropertyFromItem (</span><span class="fParams">item, property</span><span>)</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_pfldataitemnamehttppurl.orgdctermsidentifierandnotpflitemPropertyHasWidgetselfnodehttppurl.orgdctermsidentifieredu.stanford.smi.protegex.owl.ui.widget.UBBSignatureWidgetM_IdentifiersAndUUIDS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_pfldataitemnamehttppurl.orgdctermsidentifierandnotpflitemPropertyHasWidgetselfnodehttppurl.orgdctermsidentifieredu.stanford.smi.protegex.owl.ui.widget.UBBSignatureWidgetM_IdentifiersAndUUIDS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_pfldataitemnamehttppurl.orgdctermsidentifierandnotpflitemPropertyHasWidgetselfnodehttppurl.orgdctermsidentifieredu.stanford.smi.protegex.owl.ui.widget.UBBSignatureWidgetM_IdentifiersAndUUIDS_changePprj.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"pfldata:item[@name='http://purl.org/dc/terms/identifier' and not(pfl:itemPropertyHasWidget(self::node(),'http://purl.org/dc/terms/identifier','edu.stanford.smi.protegex.owl.ui.widget.UBBSignatureWidget'))]"</span><span class="tAN"> mode=</span><span class="tAV">"IdentifiersAndUUID"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"add-identifier-widget"</span><span class="tAN"> select=</span><span class="tAV">"not(pfl:itemPropertyHasWidget(self::node(),'http://purl.org/dc/terms/identifier','edu.stanford.smi.protegex.owl.ui.widget.UBBSignatureWidget'))"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"item-with-removed-widget"</span><span class="tAN"> as=</span><span class="tAV">"element(pfldata:item)"</span><span class="tAN"> select=</span><span class="tAV">"pfl:removePropertyFromItem(self::node(),'widget_class_name')"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"item-with-added-new-widget"</span><span class="tAN"> select=</span><span class="tAV">"pfl:addPropertyToItem($item-with-removed-widget,'widget_class_name','edu.stanford.smi.protegex.owl.ui.widget.UBBSignatureWidget')"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:copy-of</span><span class="tAN"> select=</span><span class="tAV">"$item-with-added-new-widget"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="M_itemM_to-textS_changePprj.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">*:item|*</span><span class="titleTemplateMode">to-text</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_itemM_to-textS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_itemM_to-textS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_itemM_to-textS_changePprj.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>Mode to change back to text (strip element and attributes)</p>
+                                 
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>*:item|*</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>to-text</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_itemM_to-textS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_itemM_to-textS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_itemM_to-textS_changePprj.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"*:item|*"</span><span class="tAN"> mode=</span><span class="tAV">"to-text"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> mode=</span><span class="tAV">"to-text"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="P_pprj-fileS_changePprj.xsl"></a><div class="cmpT">Parameter
+         <span class="qname">pprj-file</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_P_pprj-fileS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_P_pprj-fileS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_P_pprj-fileS_changePprj.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3><pre>
+    &lt;xsl:param name="pprj-file" as="xs:string" select="'/home/oyvind/repos/dst/projects/protege-projects/marcus-bs/marcus-bs.pprj'"&gt;&lt;/xsl:param&gt;
+    </pre></div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Select</td>
+                        <td>'file:/C:/Users/user/Repos/dst/protege-projects/marcus-bs/marcus-bs.pprj'</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Type</td>
+                        <td>xs:string</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_P_pprj-fileS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_P_pprj-fileS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_P_pprj-fileS_changePprj.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="changePprj0.html#M_S_changePprj.xsl" target="_self" title="No namespace" onclick="updPT('changePprj.xsl')"><span class="mRf">/</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_P_pprj-fileS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_P_pprj-fileS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_P_pprj-fileS_changePprj.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:param</span><span class="tAN"> name=</span><span class="tAV">"pprj-file"</span><span class="tAN"> as=</span><span class="tAV">"xs:string"</span><span class="tAN"> select=</span><span class="tAV">"'file:/C:/Users/user/Repos/dst/protege-projects/marcus-bs/marcus-bs.pprj'"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="P_debugS_changePprj.xsl"></a><div class="cmpT">Parameter
+         <span class="qname">debug</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Select</td>
+                        <td>false()</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Type</td>
+                        <td>xs:boolean</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_P_debugS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_P_debugS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_P_debugS_changePprj.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="changePprj0.html#M_S_changePprj.xsl" target="_self" title="No namespace" onclick="updPT('changePprj.xsl')"><span class="mRf">/</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_P_debugS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_P_debugS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_P_debugS_changePprj.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:param</span><span class="tAN"> name=</span><span class="tAV">"debug"</span><span class="tAN"> as=</span><span class="tAV">"xs:boolean"</span><span class="tAN"> select=</span><span class="tAV">"false()"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="P_lookupS_changePprj.xsl"></a><div class="cmpT">Parameter
+         <span class="qname">lookup</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_P_lookupS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_P_lookupS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_P_lookupS_changePprj.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>unparsed text pprj project file in UTF-8</p>
+                                 
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Select</td>
+                        <td>'test/skeivt-arkiv-test.pprj'</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_P_lookupS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_P_lookupS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_P_lookupS_changePprj.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:param</span><span class="tAN"> name=</span><span class="tAV">"lookup"</span><span class="tAN"> select=</span><span class="tAV">"'test/skeivt-arkiv-test.pprj'"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="P_project-nameS_changePprj.xsl"></a><div class="cmpT">Parameter
+         <span class="qname">project-name</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Select</td>
+                        <td>'marcus-bs_ProjectKB_Class'</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_P_project-nameS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_P_project-nameS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_P_project-nameS_changePprj.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Templates</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="changePprj0.html#M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.UUIDWidgetM_IdentifiersAndUUIDS_changePprj.xsl" target="_self" title="No namespace" onclick="updPT('changePprj.xsl')"><span class="mRf">pfldata:item[@properties          and pfl:isPropertylistForOntology(self::pfldata:item,$ubbont-document)
+                                                   and not(pfl:itemHasPropertyWithWidget(self::node(),'edu.stanford.smi.protegex.owl.ui.widget.UUIDWidget'))]</span><span class="mdRf">IdentifiersAndUUID</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="changePprj0.html#M_pfldataitempropertiesandpflisPropertylistForOntologyselfpfldataitemubbont-documentandnotpflitemHasPropertyWithWidgetselfnodeedu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidgetM_classHierarchyWidgetS_changePprj.xsl" target="_self" title="No namespace" onclick="updPT('changePprj.xsl')"><span class="mRf">pfldata:item[@properties          and          pfl:isPropertylistForOntology(self::pfldata:item,$ubbont-document)
+                                                   and not(pfl:itemHasPropertyWithWidget(self::node(),'edu.stanford.smi.protegex.owl.ui.widget.ClassHierarchyURIWidget'))
+                                                   ]</span><span class="mdRf">classHierarchyWidget</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_P_project-nameS_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_P_project-nameS_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_P_project-nameS_changePprj.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:param</span><span class="tAN"> name=</span><span class="tAV">"project-name"</span><span class="tAN"> select=</span><span class="tAV">"'marcus-bs_ProjectKB_Class'"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="O_S_changePprj.xsl"></a><div class="cmpT">Output
+         <span class="qname">(default)</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_O_S_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_O_S_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_O_S_changePprj.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 
+                                 <p>For debugging change to xml</p>
+                                 
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Output properties</div>
+                           <div class="flR"><input id="bt_o_" type="image" src="img/btM.gif" value="-" onclick="switchState('o_');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="o_" style="display:block">
+                              <table class="attsT">
+                                 <thead>
+                                    <tr>
+                                       <th>method</th>
+                                       <th>encoding</th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td>text</td>
+                                    <td>UTF-8</td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_O_S_changePprj.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_O_S_changePprj.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_O_S_changePprj.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:output</span><span class="tAN"> method=</span><span class="tAV">"text"</span><span class="tAN"> encoding=</span><span class="tAV">"UTF-8"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="footer">
+         <hr />
+         <div align="center">Stylesheet documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup> XML Editor.
+         </div>
+      </div><script type="text/javascript">
+         <!--
+                    // The namespace is the selected option in the TOC combo.
+                    
+                    // The corresponding div is already visible conf. to its style attr.                     
+                    
+                            var selectToc = getElementObject('selectTOC');
+                            if(selectToc != null){
+                            // It can be null when having chunking, the combo of the TOC is in another frame.
+                            selectToc.selectedIndex = 0;
+                            }
+                        
+                    
+                    // Floats the toolbar.
+                    var globalControls = getElementObject("global_controls"); 
+                    
+                    if(globalControls != null){
+                    var browser=navigator.appName;
+                    var version = parseFloat(navigator.appVersion.split('MSIE')[1]);
+                    
+                    var IE6 = false;
+                    if ((browser=="Microsoft Internet Explorer") && (version < 7)){
+                    IE6 = true;
+                    }
+                    
+                    //alert (IE6 + " |V| " + version);
+                    
+                    if(IE6){
+                    // On IE 6 the 'fixed' property is not supported. We must use javascript. 
+                    globalControls.style.position='absolute';                         
+                    // The global controls will do not exist in the TOC frame, when chunking.
+                    findAndFloat("global_controls", 225, 30);    
+                    } else {
+                    globalControls.style.position='fixed';                     	
+                    }
+                    
+                    globalControls.style.right='0';                       
+                    }
+                //--></script></body>
+</html>
