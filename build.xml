@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="update-pprj" default="transform">
+    <target name="downloadSaxon">
+        <mkdir dir="lib"/>
+        <get  skipexisting="true" src="http://central.maven.org/maven2/net/sf/saxon/Saxon-HE/9.7.0-18/Saxon-HE-9.7.0-18.jar" dest="lib/SaxonHE9-7-0-18.jar"/>        
+    </target>
+    
+    <target name="transform" depends="downloadSaxon">
+        <xslt in="dummy.xml" style="xsl/changePprj.xsl" out="marcus.pprj" force="yes" >
+            <param name="pprj-file" expression="file:${basedir}/test/marcus-bs.pprj"/>
+            <param name="ontology" expression="http://data.ub.uib.no/ontology/ubbont.owl"/>
+            <classpath path="lib/SaxonHE9-7-0-18.jar"/>
+        </xslt>
+    </target>
+  
+</project>

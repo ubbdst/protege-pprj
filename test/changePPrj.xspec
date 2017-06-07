@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description  xmlns:pfl="http://data.ub.uib.no/protege3/function-library"
+    xmlns:pfldata="http://data.ub.uib.no/protege3/pprj/data"
+xmlns:x="http://www.jenitennison.com/xslt/xspec" stylesheet="../xsl/changePprj.xsl">
+    <x:param name="lookup" href="test/lookup.pprj"/>
+    <x:param name="property-list">
+            <properties>
+                <property type="string" name="name"/>
+                <property type="string" name="label"/>
+                <property type="object" name="property_list"/>
+                <property type="string" name="widget_class_name"/>
+                <property type="integer" name="width"/>
+                <property type="integer" name="height"/>
+                <property type="integer" name="x"/>
+                <property type="integer" name="y"/>
+            </properties>
+    </x:param>
+ 
+    <x:scenario label="testing function pfl:getPropertyFromString">
+        
+        <x:scenario label="testing function pfl:getPropertyFromString for string property">
+            <x:call function="pfl:getPropertyFromString">
+                <x:param name="property" select="'name'"/>
+                <x:param name="string" as="xs:string">
+                    ([empty.owl_ProjectKB_Class5] of  String                    
+                    (name "owl_major_build")
+                    (string_value "3.5"))                   
+                </x:param>
+            </x:call>
+            <x:expect label="expecting owl_major_build'" select="string('owl_major_build')"/>
+        </x:scenario>
+        
+        <x:scenario label="testing function pfl:getPropertyFromString for string property">
+            <x:call function="pfl:getPropertyFromString">
+                <x:param name="property" select="'property_list'"/>
+                <x:param name="string" as="xs:string">
+                    ([empty.owl_ProjectKB_Class5] of  String
+                    (property_list [Instance_47])
+                    (name "owl_major_build")
+                    (string_value "3.5"))
+                    (height 476)
+                </x:param>
+            </x:call>
+            <x:expect label="expecting Instance_47'" select="string('Instance_47')"/>
+        </x:scenario>
+        
+        <x:scenario label="testing function pfl:getPropertyFromString for string property">
+            <x:call function="pfl:getPropertyFromString">
+                <x:param name="property" select="'height'"/>
+                <x:param name="string" as="xs:string">
+                    ([empty.owl_ProjectKB_Class5] of  String
+                    (property_list [Instance_47])
+                    (name "owl_major_build")
+                    (string_value "3.5"))
+                    (height 476)
+                </x:param>
+            </x:call>
+            <x:expect label="expecting 476'" select="string('476')"/>
+        </x:scenario>
+    </x:scenario>
+    
+   <x:scenario label="testing function pfl:itemPropertyHasWidget(element(item))">
+            
+        <x:scenario label=" boolean">
+            <x:call function="pfl:itemPropertyHasWidget">
+                <x:param name="item">
+                    <item xmlns="http://data.ub.uib.no/protege3/pprj/data" name="http://purl.org/dc/terms/identifier" project-type="Widget" property_list="marcus-bs_ProjectKB_Class110015" widget_class_name="edu.stanford.smi.protegex.widget.identifier.UBBIdGeneratorWidget" width="200" height="60" x="400" y="0">([marcus-bs_ProjectKB_Class110014] of  Widget&#xD;
+                        &#xD;
+                        (height 60)&#xD;
+                        (is_hidden FALSE)&#xD;
+                        (name "http://purl.org/dc/terms/identifier")&#xD;
+                        (property_list [marcus-bs_ProjectKB_Class110015])&#xD;
+                        (widget_class_name "edu.stanford.smi.protegex.widget.identifier.UBBIdGeneratorWidget")&#xD;
+                        (width 200)&#xD;
+                        (x 400)&#xD;
+                        (y 0))&#xD;
+                        &#xD;
+                    </item>
+                </x:param>
+                    <x:param name="property" select="'http://purl.org/dc/terms/identifier'"/>
+                    <x:param name="widget" select="'edu.stanford.smi.protegex.widget.identifier.UBBIdGeneratorWidget'"/>
+                    <x:param name="items" as="node()" href="./items.xml">
+                        <items xmlns="http://data.ub.uib.no/protege3/pprj/data" xmlns:pfl="http://data.ub.uib.no/protege3/function-library">; Tue May 16 15:51:19 CEST 2017&#xD;
+                            ; &#xD;
+                            ;+ (version "3.5")&#xD;
+                            ;+ (build "Build 663")&#xD;
+                            &#xD;
+                            <item name="http://purl.org/dc/terms/identifier" project-type="Widget" property_list="marcus-bs_ProjectKB_Class110015" widget_class_name="edu.stanford.smi.protegex.widget.identifier.UBBIdGeneratorWidget" width="200" height="60" x="400" y="0">([marcus-bs_ProjectKB_Class110014] of  Widget&#xD;
+                                &#xD;
+                                (height 60)&#xD;
+                                (is_hidden FALSE)&#xD;
+                                (name "http://purl.org/dc/terms/identifier")&#xD;
+                                (property_list [marcus-bs_ProjectKB_Class110015])&#xD;
+                                (widget_class_name "edu.stanford.smi.protegex.widget.identifier.UBBIdGeneratorWidget")&#xD;
+                                (width 200)&#xD;
+                                (x 400)&#xD;
+                                (y 0))&#xD;
+                                &#xD;
+                            </item>
+                            <item xmlns="http://data.ub.uib.no/protege3/pprj/data" id="BROWSER_SLOT_NAMES" project-type="Property_List" properties="marcus-bs_ProjectKB_Class430234 marcus-bs_ProjectKB_Class430235 marcus-bs_ProjectKB_Class430236 marcus-bs_ProjectKB_Class430237 marcus-bs_ProjectKB_Class430238 marcus-bs_ProjectKB_Class430239 marcus-bs_ProjectKB_Class430240 marcus-bs_ProjectKB_Class430241 marcus-bs_ProjectKB_Class430242 marcus-bs_ProjectKB_Class430243 marcus-bs_ProjectKB_Class430244 marcus-bs_ProjectKB_Class430245 marcus-bs_ProjectKB_Class430246 marcus-bs_ProjectKB_Class430247 marcus-bs_ProjectKB_Class430248 marcus-bs_ProjectKB_Class430249 marcus-bs_ProjectKB_Class430250 marcus-bs_ProjectKB_Class430251 marcus-bs_ProjectKB_Class430252 marcus-bs_ProjectKB_Class430253 marcus-bs_ProjectKB_Class430254 marcus-bs_ProjectKB_Class430255 marcus-bs_ProjectKB_Class430256 marcus-bs_ProjectKB_Class430257 marcus-bs_ProjectKB_Class430258 marcus-bs_ProjectKB_Class430259 marcus-bs_ProjectKB_Class430260 marcus-bs_ProjectKB_Class430261 marcus-bs_ProjectKB_Class430262 marcus-bs_ProjectKB_Class430263 marcus-bs_ProjectKB_Class430264 marcus-bs_ProjectKB_Class430265 marcus-bs_ProjectKB_Class430266 marcus-bs_ProjectKB_Class430267 marcus-bs_ProjectKB_Class430268 marcus-bs_ProjectKB_Class430269 marcus-bs_ProjectKB_Class430270 marcus-bs_ProjectKB_Class430271 marcus-bs_ProjectKB_Class430272 marcus-bs_ProjectKB_Class430273 marcus-bs_ProjectKB_Class430274 marcus-bs_ProjectKB_Class430275">([BROWSER_SLOT_NAMES] of  Property_List&#xD;
+                                &#xD;
+                                (properties&#xD;
+                                [marcus-bs_ProjectKB_Class430234]&#xD;
+                                [marcus-bs_ProjectKB_Class430235]&#xD;
+                                [marcus-bs_ProjectKB_Class430236]&#xD;
+                                [marcus-bs_ProjectKB_Class430237]&#xD;
+                                [marcus-bs_ProjectKB_Class430238]&#xD;
+                                [marcus-bs_ProjectKB_Class430239]&#xD;
+                                [marcus-bs_ProjectKB_Class430240]&#xD;
+                                [marcus-bs_ProjectKB_Class430241]&#xD;
+                                [marcus-bs_ProjectKB_Class430242]&#xD;
+                                [marcus-bs_ProjectKB_Class430243]&#xD;
+                                [marcus-bs_ProjectKB_Class430244]&#xD;
+                                [marcus-bs_ProjectKB_Class430245]&#xD;
+                                [marcus-bs_ProjectKB_Class430246]&#xD;
+                                [marcus-bs_ProjectKB_Class430247]&#xD;
+                                [marcus-bs_ProjectKB_Class430248]&#xD;
+                                [marcus-bs_ProjectKB_Class430249]&#xD;
+                                [marcus-bs_ProjectKB_Class430250]&#xD;
+                                [marcus-bs_ProjectKB_Class430251]&#xD;
+                                [marcus-bs_ProjectKB_Class430252]&#xD;
+                                [marcus-bs_ProjectKB_Class430253]&#xD;
+                                [marcus-bs_ProjectKB_Class430254]&#xD;
+                                [marcus-bs_ProjectKB_Class430255]&#xD;
+                                [marcus-bs_ProjectKB_Class430256]&#xD;
+                                [marcus-bs_ProjectKB_Class430257]&#xD;
+                                [marcus-bs_ProjectKB_Class430258]&#xD;
+                                [marcus-bs_ProjectKB_Class430259]&#xD;
+                                [marcus-bs_ProjectKB_Class430260]&#xD;
+                                [marcus-bs_ProjectKB_Class430261]&#xD;
+                                [marcus-bs_ProjectKB_Class430262]&#xD;
+                                [marcus-bs_ProjectKB_Class430263]&#xD;
+                                [marcus-bs_ProjectKB_Class430264]&#xD;
+                                [marcus-bs_ProjectKB_Class430265]&#xD;
+                                [marcus-bs_ProjectKB_Class430266]&#xD;
+                                [marcus-bs_ProjectKB_Class430267]&#xD;
+                                [marcus-bs_ProjectKB_Class430268]&#xD;
+                                [marcus-bs_ProjectKB_Class430269]&#xD;
+                                [marcus-bs_ProjectKB_Class430270]&#xD;
+                                [marcus-bs_ProjectKB_Class430271]&#xD;
+                                [marcus-bs_ProjectKB_Class430272]&#xD;
+                                [marcus-bs_ProjectKB_Class430273]&#xD;
+                                [marcus-bs_ProjectKB_Class430274]&#xD;
+                                [marcus-bs_ProjectKB_Class430275]))&#xD;
+                                &#xD;
+                            </item>
+                        </items>
+                    </x:param>
+            </x:call>
+            <x:expect label="true returned" select="true()" />
+        </x:scenario>
+        <x:scenario label="testing function pfl:itemPropertyHasWidget(element(item)) boolean with input where output is supposed to return true">
+            <x:call function="pfl:itemPropertyHasWidget">
+                <x:param name="item">
+                    <item xmlns="http://data.ub.uib.no/protege3/pprj/data" name="http://purl.org/dc/terms/identifier" project-type="Widget" property_list="marcus-bs_ProjectKB_Class110015" widget_class_name="edu.stanford.smi.protegex.widget.identifier.UBBIdGeneratorWidget1" width="200" height="60" x="400" y="0">([marcus-bs_ProjectKB_Class110014] of  Widget&#xD;
+                        &#xD;
+                        (height 60)&#xD;
+                        (is_hidden FALSE)&#xD;
+                        (name "http://purl.org/dc/terms/identifier")&#xD;
+                        (property_list [marcus-bs_ProjectKB_Class110015])&#xD;
+                        (widget_class_name "edu.stanford.smi.protegex.widget.identifier.UBBIdGeneratorWidget1")&#xD;
+                        (width 200)&#xD;
+                        (x 400)&#xD;
+                        (y 0))&#xD;
+                        &#xD;
+                    </item>
+                </x:param>
+                <x:param name="property" select="'http://purl.org/dc/terms/identifier'"/>
+                <x:param name="widget" select="'edu.stanford.smi.protegex.widget.identifier.UBBIdGeneratorWidget'"/>
+                <x:param name="items" as="node()" href="./items.xml">
+                    <items xmlns="http://data.ub.uib.no/protege3/pprj/data" xmlns:pfl="http://data.ub.uib.no/protege3/function-library">; Tue May 16 15:51:19 CEST 2017&#xD;
+                        ; &#xD;
+                        ;+ (version "3.5")&#xD;
+                        ;+ (build "Build 663")&#xD;
+                        &#xD;
+                        <item name="http://purl.org/dc/terms/identifier" project-type="Widget" property_list="marcus-bs_ProjectKB_Class110015" widget_class_name="edu.stanford.smi.protegex.widget.identifier.UBBIdGeneratorWidget" width="200" height="60" x="400" y="0">([marcus-bs_ProjectKB_Class110014] of  Widget&#xD;
+                            &#xD;
+                            (height 60)&#xD;
+                            (is_hidden FALSE)&#xD;
+                            (name "http://purl.org/dc/terms/identifier")&#xD;
+                            (property_list [marcus-bs_ProjectKB_Class110015])&#xD;
+                            (widget_class_name "edu.stanford.smi.protegex.widget.identifier.UBBIdGeneratorWidget1")&#xD;
+                            (width 200)&#xD;
+                            (x 400)&#xD;
+                            (y 0))&#xD;
+                            &#xD;
+                        </item>
+                        <item xmlns="http://data.ub.uib.no/protege3/pprj/data" id="BROWSER_SLOT_NAMES" project-type="Property_List" properties="marcus-bs_ProjectKB_Class430234 marcus-bs_ProjectKB_Class430235 marcus-bs_ProjectKB_Class430236 marcus-bs_ProjectKB_Class430237 marcus-bs_ProjectKB_Class430238 marcus-bs_ProjectKB_Class430239 marcus-bs_ProjectKB_Class430240 marcus-bs_ProjectKB_Class430241 marcus-bs_ProjectKB_Class430242 marcus-bs_ProjectKB_Class430243 marcus-bs_ProjectKB_Class430244 marcus-bs_ProjectKB_Class430245 marcus-bs_ProjectKB_Class430246 marcus-bs_ProjectKB_Class430247 marcus-bs_ProjectKB_Class430248 marcus-bs_ProjectKB_Class430249 marcus-bs_ProjectKB_Class430250 marcus-bs_ProjectKB_Class430251 marcus-bs_ProjectKB_Class430252 marcus-bs_ProjectKB_Class430253 marcus-bs_ProjectKB_Class430254 marcus-bs_ProjectKB_Class430255 marcus-bs_ProjectKB_Class430256 marcus-bs_ProjectKB_Class430257 marcus-bs_ProjectKB_Class430258 marcus-bs_ProjectKB_Class430259 marcus-bs_ProjectKB_Class430260 marcus-bs_ProjectKB_Class430261 marcus-bs_ProjectKB_Class430262 marcus-bs_ProjectKB_Class430263 marcus-bs_ProjectKB_Class430264 marcus-bs_ProjectKB_Class430265 marcus-bs_ProjectKB_Class430266 marcus-bs_ProjectKB_Class430267 marcus-bs_ProjectKB_Class430268 marcus-bs_ProjectKB_Class430269 marcus-bs_ProjectKB_Class430270 marcus-bs_ProjectKB_Class430271 marcus-bs_ProjectKB_Class430272 marcus-bs_ProjectKB_Class430273 marcus-bs_ProjectKB_Class430274 marcus-bs_ProjectKB_Class430275">([BROWSER_SLOT_NAMES] of  Property_List&#xD;
+                            &#xD;
+                            (properties&#xD;
+                            [marcus-bs_ProjectKB_Class430234]&#xD;
+                            [marcus-bs_ProjectKB_Class430235]&#xD;
+                            [marcus-bs_ProjectKB_Class430236]&#xD;
+                            [marcus-bs_ProjectKB_Class430237]&#xD;
+                            [marcus-bs_ProjectKB_Class430238]&#xD;
+                            [marcus-bs_ProjectKB_Class430239]&#xD;
+                            [marcus-bs_ProjectKB_Class430240]&#xD;
+                            [marcus-bs_ProjectKB_Class430241]&#xD;
+                            [marcus-bs_ProjectKB_Class430242]&#xD;
+                            [marcus-bs_ProjectKB_Class430243]&#xD;
+                            [marcus-bs_ProjectKB_Class430244]&#xD;
+                            [marcus-bs_ProjectKB_Class430245]&#xD;
+                            [marcus-bs_ProjectKB_Class430246]&#xD;
+                            [marcus-bs_ProjectKB_Class430247]&#xD;
+                            [marcus-bs_ProjectKB_Class430248]&#xD;
+                            [marcus-bs_ProjectKB_Class430249]&#xD;
+                            [marcus-bs_ProjectKB_Class430250]&#xD;
+                            [marcus-bs_ProjectKB_Class430251]&#xD;
+                            [marcus-bs_ProjectKB_Class430252]&#xD;
+                            [marcus-bs_ProjectKB_Class430253]&#xD;
+                            [marcus-bs_ProjectKB_Class430254]&#xD;
+                            [marcus-bs_ProjectKB_Class430255]&#xD;
+                            [marcus-bs_ProjectKB_Class430256]&#xD;
+                            [marcus-bs_ProjectKB_Class430257]&#xD;
+                            [marcus-bs_ProjectKB_Class430258]&#xD;
+                            [marcus-bs_ProjectKB_Class430259]&#xD;
+                            [marcus-bs_ProjectKB_Class430260]&#xD;
+                            [marcus-bs_ProjectKB_Class430261]&#xD;
+                            [marcus-bs_ProjectKB_Class430262]&#xD;
+                            [marcus-bs_ProjectKB_Class430263]&#xD;
+                            [marcus-bs_ProjectKB_Class430264]&#xD;
+                            [marcus-bs_ProjectKB_Class430265]&#xD;
+                            [marcus-bs_ProjectKB_Class430266]&#xD;
+                            [marcus-bs_ProjectKB_Class430267]&#xD;
+                            [marcus-bs_ProjectKB_Class430268]&#xD;
+                            [marcus-bs_ProjectKB_Class430269]&#xD;
+                            [marcus-bs_ProjectKB_Class430270]&#xD;
+                            [marcus-bs_ProjectKB_Class430271]&#xD;
+                            [marcus-bs_ProjectKB_Class430272]&#xD;
+                            [marcus-bs_ProjectKB_Class430273]&#xD;
+                            [marcus-bs_ProjectKB_Class430274]&#xD;
+                            [marcus-bs_ProjectKB_Class430275]))&#xD;
+                            &#xD;
+                        </item>
+                    </items>
+                </x:param>
+            </x:call>
+            <x:expect label="true returned" select="false()" />
+        </x:scenario>
+        </x:scenario>
+        
+    <x:scenario label="testing pfl:removePropertyFromItem">
+            <x:call function="pfl:removePropertyFromItem">
+                <x:param name="item">
+                    <item xmlns="http://data.ub.uib.no/protege3/pprj/data" id="marcus-bs_ProjectKB_Class10617" project-type="Widget" name="http://data.ub.uib.no/ontology/locationFor" property_list="marcus-bs_ProjectKB_Class10618" widget_class_name="edu.stanford.smi.protegex.owl.ui.widget.MultiResourceWidget" width="200" height="500" x="0" y="120" label="Sted for">([marcus-bs_ProjectKB_Class10617] of  Widget&#xD;
+                        &#xD;
+                        (height 500)&#xD;
+                        (is_hidden FALSE)&#xD;
+                        (label "Sted for")&#xD;
+                        (widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.MultiResourceWidget")&#xD;
+                        (name "http://data.ub.uib.no/ontology/locationFor")&#xD;
+                        (property_list [marcus-bs_ProjectKB_Class10618])&#xD;
+                        (width 200)&#xD;
+                        (x 0)&#xD;
+                        (y 120))&#xD;
+                        &#xD;
+                    </item>
+                </x:param>
+                <x:param name="property" select="'widget_class_name'"/>
+                
+            </x:call>
+          <!--  <x:expect label="string">
+           <item  xmlns="http://data.ub.uib.no/protege3/pprj/data" xmlns:pfldata="http://data.ub.uib.no/protege3/pprj/data" id="marcus-bs_ProjectKB_Class10617" project-type="Widget" name="http://data.ub.uib.no/ontology/locationFor" label="Sted for" property_list="marcus-bs_ProjectKB_Class10618"  width="200" height="500" x="0" y="120">([marcus-bs_ProjectKB_Class10617] of  Widget&#xD;
+                &#xD;
+                (height 500)&#xD;
+                (is_hidden FALSE)&#xD;
+                (label "Sted for")&#xD;
+                (name "http://data.ub.uib.no/ontology/locationFor")&#xD;
+                (property_list [marcus-bs_ProjectKB_Class10618])&#xD;
+                (width 200)&#xD;
+                (x 0)&#xD;
+                (y 120))&#xD;
+                &#xD;
+            </item>
+            </x:expect>-->
+            <x:expect label="item element with removed attribute widget class name" test="not(pfldata:item/@widget_class_name)"/>
+            <x:expect label="... and not containing string widget_class_name" test="not(contains(pfldata:item,'widget_class_name'))"></x:expect>
+            <x:expect label="... with @id" test="pfldata:item/@id='marcus-bs_ProjectKB_Class10617'"/>
+            <x:expect label="... with @project-type='Widget'" test="pfldata:item/@project-type='Widget'"/>   
+            <x:expect label="... every class in global param property-list exists as an attribute name" 
+                test="every $x in $property-list/descendant::property/@name[.!='widget_class_name']
+                satisfies exists(pfldata:item/@*[name()=$x])"/>
+        </x:scenario>
+    
+    <x:scenario label="testing pfl:addPropertyToItem">
+        <x:scenario label="testing string type">
+            <x:call function="pfl:addPropertyToItem">
+                <x:param name="item">
+                    <pfldata:item id="marcus-bs_ProjectKB_Class110014" name="http://purl.org/dc/terms/identifier" project-type="Widget" property_list="marcus-bs_ProjectKB_Class110015" width="200" height="60" x="400" y="0">([marcus-bs_ProjectKB_Class110014] of  Widget&#xD;
+                        &#xD;
+                        (height 60)&#xD;
+                        (is_hidden FALSE)&#xD;
+                        (name "http://purl.org/dc/terms/identifier")&#xD;
+                        (property_list [marcus-bs_ProjectKB_Class110015])&#xD;
+                        (width 200)&#xD;
+                        (x 400)&#xD;
+                        (y 0))&#xD;
+                        &#xD;
+                    </pfldata:item>
+                </x:param>
+                <x:param name="property" select="'widget_class_name'"/>
+                <x:param name="value" select="'edu.stanford.smi.protegex.widget.identifier.UBBIdGeneratorWidget'"/>
+            </x:call>
+            <x:expect label="Expecting item with widget_class_name attribute equal to IdGenerator" test="pfldata:item/@widget_class_name='edu.stanford.smi.protegex.widget.identifier.UBBIdGeneratorWidget'">
+                <!--<pfldata:item name="http://purl.org/dc/terms/identifier" project-type="Widget" widget_class_name="edu.stanford.smi.protegex.widget.identifier.UBBIdGeneratorWidget" property_list="marcus-bs_ProjectKB_Class110015" width="200" height="60" x="400" y="0">([marcus-bs_ProjectKB_Class110014] of  Widget&#xD;
+                    &#xD;
+                    (height 60)&#xD;
+                    (is_hidden FALSE)&#xD;
+                    (name "http://purl.org/dc/terms/identifier")&#xD;
+                    (property_list [marcus-bs_ProjectKB_Class110015])&#xD;
+                    (width 200)&#xD;
+                    (x 400)&#xD;
+                    (y 0)&#xD;
+                    (widget_class_name "edu.stanford.smi.protegex.widget.identifier.UBBIdGeneratorWidget")&#xD;
+                    &#xD;
+                </pfldata:item>-->
+            </x:expect>
+            <x:expect label="... containing string 'widget_class_name...'" test="contains(pfldata:item/text(),'widget_class_name &quot;edu.stanford.smi.protegex.widget.identifier.UBBIdGeneratorWidget&quot;))')"/>
+        </x:scenario>
+        <x:scenario label="testing integer type">
+            <x:call function="pfl:addPropertyToItem">
+                <x:param name="item">
+                    <pfldata:item id="marcus-bs_ProjectKB_Class110014" name="http://purl.org/dc/terms/identifier" project-type="Widget" property_list="marcus-bs_ProjectKB_Class110015" width="200" height="60" x="400" y="0">([marcus-bs_ProjectKB_Class110014] of  Widget&#xD;
+                        &#xD;
+                        (height 60)&#xD;
+                        (is_hidden FALSE)&#xD;
+                        (name "http://purl.org/dc/terms/identifier")&#xD;
+                        (property_list [marcus-bs_ProjectKB_Class110015])&#xD;
+                        (x 400)&#xD;
+                        (y 0))&#xD;
+                        &#xD;
+                    </pfldata:item>
+                </x:param>
+                <x:param name="property" select="'width'"/>
+                <x:param name="value" select="'200'"/>
+            </x:call>
+            <x:expect label="Expecting item with @width attribute equal to 200" test="pfldata:item/@width='200'"/>
+            <x:expect label="containing string  '(width 200)'" test="contains(pfldata:item/text(),'(width 200))')"/>
+        </x:scenario>
+        <x:scenario label="testing object type" pending="should properties list have its own add? instead"/>
+        <x:scenario label="testing edge call with item without property" pending="pending implementation of additional regex"/>
+        <x:scenario label="add Property to an empty Item">
+            <x:call function="pfl:addPropertyToItem">
+                <x:param name="item">
+                    <item xmlns="http://data.ub.uib.no/protege3/pprj/data" id="XY_Instance_99" project-type="Property_List">([XY_Instance_99] of  Property_List&#xD;
+                        )&#xD;
+                    </item>
+                </x:param>
+                <x:param name="property" select="'width'"/>
+                <x:param name="value" select="'200'"/>
+            </x:call>
+            <x:expect label="test" select="'test'"/>
+        </x:scenario>
+    </x:scenario>
+   
+    <x:scenario label="look for widget_class_name which is edu.stanford.smi.protegex.owl.ui.widget.OWLFormWidget">
+        <x:scenario label="append a new URI to end of property list"/>
+        <x:scenario label="create an item element with classHierarchyURI, use number and highest number to increase URI"></x:scenario>
+    </x:scenario>
+ 
+    
+</x:description>
