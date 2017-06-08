@@ -7,7 +7,7 @@
     
     <target name="transform" depends="downloadSaxon">
         <xslt in="dummy.xml" style="xsl/changePprj.xsl" out="marcus.pprj" force="yes" >
-            <param name="pprj-file" expression="file:${basedir}/test/marcus-bs.pprj"/>
+            <param name="pprj-file" expression="../test/marcus-bs.pprj"/>
             <param name="ontology" expression="http://data.ub.uib.no/ontology/ubbont.owl"/>
             <classpath path="lib/SaxonHE9-7-0-18.jar"/>
         </xslt>
